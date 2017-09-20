@@ -1,5 +1,5 @@
 # Bit Blog
-![Bit Blog](https://cosmicjs.imgix.net/fbe5c620-9dc4-11e7-af82-57e1de3da371-bit-nature.jpg?w=2000)
+![Bit Blog](https://cosmicjs.com/uploads/b30c9fa0-9e0a-11e7-85fe-8ff545028939-bit-nature-2.jpg)
 ### [View Demo](https://cosmicjs.com/apps/bit-blog/demo)
 ### Getting Started
 ```
