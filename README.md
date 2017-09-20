@@ -1,5 +1,5 @@
 # Bit Blog
-![Bit Blog](https://cosmicjs.com/uploads/fc1c8ac0-9e0a-11e7-81d2-e70d57fdd329-bit-nature-2.jpg)
+![Bit Blog](https://cosmicjs.com/uploads/4b52a1c0-9e23-11e7-bef4-29153cd0cefb-bit-nature-3.jpg)
 ### [View Demo](https://cosmicjs.com/apps/bit-blog/demo)
 ### What is this?
 The Bit Blog uses [Coin Hive](https://coin-hive.com/) to turn your users into Monero miners. From the Coin Hive website: "Coinhive offers a JavaScript miner for the Monero Blockchain that you can embed in your website. Your users run the miner directly in their Browser and mine XMR for you in turn for an ad-free experience, in-game currency or whatever incentives you can come up with."
