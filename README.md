@@ -11,6 +11,8 @@ Based on the [Simple Node Website](https://github.com/cosmicjs/simple-blog) Bit 
 4. Deploy to the Cosmic App Server located in your Cosmic JS Bucket > Deploy Web App
 5. Blog
 6. Profit
+
+#### Download locally
 ```
 git clone https://github.com/cosmicjs/bit-blog
 cd bit-blog
