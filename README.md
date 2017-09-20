@@ -1,5 +1,5 @@
 # Simple Blog
-![Simple Roll](https://cosmicjs.com/uploads/6465cab0-246c-11e7-995a-2b3b96eb2f07-Screen%20Shot%202017-04-18%20at%202.22.26%20PM.png)
+![Bit Blog](https://cosmicjs.imgix.net/fbe5c620-9dc4-11e7-af82-57e1de3da371-bit-nature.jpg?w=2000)
 ### [View Demo](https://cosmicjs.com/apps/simple-blog/demo)
 ### Getting Started
 ```
