@@ -3,8 +3,8 @@
 ### [View Demo](https://cosmicjs.com/apps/bit-blog/demo)
 ### Getting Started
 ```
-git clone https://github.com/cosmicjs/simple-blog
-cd simple-blog
+git clone https://github.com/cosmicjs/bit-blog
+cd bit-blog
 yarn
 ```
 #### Run in development
@@ -23,5 +23,5 @@ You can easily manage the content in your Bit Blog website on Cosmic JS.  Follow
 1. [Log in to Cosmic JS](https://cosmicjs.com).
 2. Create a Bucket.
 3. Go to Your Bucket > Apps.
-4. Install the [Simple Blog Website](https://cosmicjs.com/apps/bit-blog).
+4. Install the [Bit Blog](https://cosmicjs.com/apps/bit-blog).
 5. Deploy your Blog Roll to the Cosmic App Server at Your Bucket > Web Hosting.
