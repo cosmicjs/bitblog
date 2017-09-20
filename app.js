@@ -8,7 +8,7 @@ app.set('port', (process.env.PORT || 3000))
 app.use('/', express.static(__dirname + '/public/'))
 const Cosmic = require('cosmicjs')
 const helpers = require('./helpers')
-const bucket_slug = process.env.COSMIC_BUCKET || 'simple-blog-website'
+const bucket_slug = process.env.COSMIC_BUCKET || 'bit-blog'
 const read_key = process.env.COSMIC_READ_KEY
 const write_key = process.env.COSMIC_WRITE_KEY
 const partials = {
@@ -16,6 +16,8 @@ const partials = {
   footer: 'partials/footer'
 }
 app.use('/', (req, res, next) => {
+  if (req.path === '/favicon.ico')
+    return res.end('no favi dude');
   res.locals.year = new Date().getFullYear()
   next()
 })

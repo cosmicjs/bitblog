@@ -167,7 +167,7 @@ a {
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 40px 40px;
+  padding: 40px 40px 60px;
   border: 1px solid #888;
   width: 60%;
   line-height: 30px;
@@ -188,4 +188,9 @@ a {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+.modal-image {
+  width: 150px;
+  float: left;
+  margin-right: 40px;
 }
