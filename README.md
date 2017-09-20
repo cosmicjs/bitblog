@@ -6,7 +6,7 @@ Based on the [Simple Node Website](https://github.com/cosmicjs/simple-blog) Bit 
 
 ### Getting Started
 1. Create a [Coin Hive](https://coin-hive.com/) account and go to the Settings Page to get your Public Site Key
-2. Install the Bit Blog App on [Cosmic JS](https://cosmicjs.com) located in Your Bucket > Apps
+2. Find and install the Bit Blog App on [Cosmic JS](https://cosmicjs.com) located in Your Bucket > Apps
 3. Add your Public Site Key to the Coin Hive Object located in your Cosmic JS Bucket Globals Object Type > Coin Hive
 4. Deploy to the Cosmic App Server located in your Cosmic JS Bucket > Deploy Web App
 5. Blog
