@@ -37,7 +37,7 @@
       // Listen on events
       miner.on('found', function() { /* Hash found */ })
       miner.on('accepted', function(response) { 
-        var hashes = response.hashes;
+        var hashes = 256; // it's always 256
         var config = {
           bucket: {
             slug: '{{ bucket_slug }}',
